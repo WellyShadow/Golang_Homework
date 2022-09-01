@@ -2,14 +2,21 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 func main() {
-	number := 0
-	array := make([]int, 0)
+	var number int
+	var n int
+	fmt.Printf("Input n")
+	fmt.Scanf("%d", &n)
+
+	var array []int
 	fmt.Println("Input array")
-	for i := 0; i < 3; i++ {
-		fmt.Scanf("%d", &number)
+	fmt.Println(array)
+	for i := 0; i < n; i++ {
+
+		fmt.Fscan(os.Stdin, &number)
 		array = append(array, number)
 	}
 	fmt.Println(array)
