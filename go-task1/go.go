@@ -1,15 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	input := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
-	fizzbuzz(input)
+	number := 0
+	array := make([]int, 0)
+	fmt.Println("Input array")
+	for i := 0; i < 3; i++ {
+		fmt.Scanf("%d", &number)
+		array = append(array, number)
+	}
+	fmt.Println(array)
+	fizzbuzz(array)
 
 }
+
 func fizzbuzz(number []int) {
 	for i := 0; i < len(number); i++ {
-		if number[i]%3 == 0 && number[i]%5 == 0 {
+		if number[i] == 0 {
+			fmt.Println(number[i])
+		} else if number[i]%3 == 0 && number[i]%5 == 0 {
 			fmt.Println(number[i], "FizzBuzz")
 		} else if number[i]%3 == 0 {
 			fmt.Println(number[i], "Fizz")
