@@ -1,0 +1,97 @@
+050cb6e (HEAD -> master, origin/master, origin/first, origin/develop, first, develop) HEAD@{0}: merge develop: Fast-forward
+6296a44 HEAD@{1}: checkout: moving from develop to master
+050cb6e (HEAD -> master, origin/master, origin/first, origin/develop, first, develop) HEAD@{2}: merge first: Fast-forward
+daf5ab3 (origin/second, second) HEAD@{3}: checkout: moving from first to develop
+050cb6e (HEAD -> master, origin/master, origin/first, origin/develop, first, develop) HEAD@{4}: rebase (continue) (finish): returning to refs/heads/first
+050cb6e (HEAD -> master, origin/master, origin/first, origin/develop, first, develop) HEAD@{5}: rebase (continue): modified readme in first
+2f82e7a HEAD@{6}: rebase (continue) (squash): modified anyfile
+ea31101 HEAD@{7}: rebase (continue) (squash): # This is a combination of 2 commits.
+50271a5 HEAD@{8}: rebase (continue): modified anyfile
+daf5ab3 (origin/second, second) HEAD@{9}: rebase (start): checkout develop
+0b2cd68 HEAD@{10}: checkout: moving from develop to first
+daf5ab3 (origin/second, second) HEAD@{11}: merge second: Fast-forward
+0031072 HEAD@{12}: checkout: moving from first to develop
+0b2cd68 HEAD@{13}: commit: add styles_first in first
+696a3ba HEAD@{14}: commit: modified readme in first
+659ff7c HEAD@{15}: commit: add file_in_first in first
+c1d7720 HEAD@{16}: commit: delete file_in_develop from first
+1fade2d HEAD@{17}: commit: modified anyfile
+0031072 HEAD@{18}: checkout: moving from develop to first
+0031072 HEAD@{19}: checkout: moving from first to develop
+0031072 HEAD@{20}: reset: moving to 0031072e
+3c6e59a HEAD@{21}: reset: moving to 3c6e59af
+71c9818 HEAD@{22}: rebase (finish): returning to refs/heads/first
+71c9818 HEAD@{23}: rebase (pick): modified readme in first
+3c6e59a HEAD@{24}: rebase (squash): delete file_in_develop
+0b9f6b4 HEAD@{25}: rebase (squash): # This is a combination of 2 commits.
+6b406f5 HEAD@{26}: rebase (start): checkout develop
+225637d HEAD@{27}: checkout: moving from develop to first
+0031072 HEAD@{28}: checkout: moving from first to develop
+225637d HEAD@{29}: commit: add style_first in first
+8c36c04 HEAD@{30}: commit: modified readme in first
+c380c27 HEAD@{31}: commit: add file_in_first in first
+4f07454 HEAD@{32}: commit: modified anyfile
+6b406f5 HEAD@{33}: commit: delete file_in_develop
+0031072 HEAD@{34}: checkout: moving from second to first
+daf5ab3 (origin/second, second) HEAD@{35}: checkout: moving from master to second
+6296a44 HEAD@{36}: checkout: moving from develop to master
+0031072 HEAD@{37}: checkout: moving from first to develop
+0031072 HEAD@{38}: checkout: moving from develop to first
+0031072 HEAD@{39}: checkout: moving from first to develop
+0031072 HEAD@{40}: reset: moving to 0031072e
+1f4f2c8 HEAD@{41}: reset: moving to HEAD
+1f4f2c8 HEAD@{42}: checkout: moving from develop to first
+0031072 HEAD@{43}: reset: moving to 0031072e
+0031072 HEAD@{44}: reset: moving to HEAD
+0031072 HEAD@{45}: reset: moving to HEAD
+0031072 HEAD@{46}: reset: moving to HEAD
+0031072 HEAD@{47}: checkout: moving from first to develop
+1f4f2c8 HEAD@{48}: rebase (continue) (finish): returning to refs/heads/first
+1f4f2c8 HEAD@{49}: rebase (continue) (pick): modified file_for_first in first
+07c72ce HEAD@{50}: rebase (continue) (squash): add file_for_first in first
+120fdd3 HEAD@{51}: rebase (continue): add file_for_first in first
+7a94c85 HEAD@{52}: rebase (pick): add file_for_first in first
+0031072 HEAD@{53}: rebase (start): checkout develop
+006215c HEAD@{54}: checkout: moving from second to first
+daf5ab3 (origin/second, second) HEAD@{55}: checkout: moving from develop to second
+0031072 HEAD@{56}: checkout: moving from second to develop
+daf5ab3 (origin/second, second) HEAD@{57}: rebase (continue) (finish): returning to refs/heads/second
+daf5ab3 (origin/second, second) HEAD@{58}: rebase (continue) (pick): add styles_second in second
+8374653 HEAD@{59}: rebase (continue) (pick): modified file_for_second in second
+ab84b85 HEAD@{60}: commit: change file_for_second
+2b02403 HEAD@{61}: reset: moving to HEAD^
+62b38ec HEAD@{62}: rebase (continue) (edit): add file for second in second
+2b02403 HEAD@{63}: commit: divide commit readme
+b233d21 HEAD@{64}: commit: divide commit anyfile
+0031072 HEAD@{65}: rebase (start): checkout develop
+c3f50b4 HEAD@{66}: rebase (abort): updating HEAD
+0031072 HEAD@{67}: rebase (start): checkout develop
+c3f50b4 HEAD@{68}: rebase (abort): updating HEAD
+e6c64e1 HEAD@{69}: commit: resolv conflict
+0031072 HEAD@{70}: rebase (start): checkout develop
+c3f50b4 HEAD@{71}: rebase (abort): updating HEAD
+0031072 HEAD@{72}: rebase (start): checkout develop
+c3f50b4 HEAD@{73}: rebase (abort): updating HEAD
+0031072 HEAD@{74}: rebase (start): checkout develop
+c3f50b4 HEAD@{75}: checkout: moving from develop to second
+0031072 HEAD@{76}: checkout: moving from second to develop
+c3f50b4 HEAD@{77}: commit: add styles_second in second
+ad275d6 HEAD@{78}: commit: modified file_for_second in second
+2b8b0c8 HEAD@{79}: commit: add file for second in second
+ecf06c8 HEAD@{80}: commit: modified anyfile and readme in second
+31ae257 HEAD@{81}: checkout: moving from first to second
+006215c HEAD@{82}: commit: modified file_for_first in first
+81a3ac2 HEAD@{83}: commit: add style in first
+c2f0e46 HEAD@{84}: commit: modified readme in first
+99739f4 HEAD@{85}: commit: modified in first
+c04b5f6 HEAD@{86}: commit: add file_for_first in first
+31ae257 HEAD@{87}: checkout: moving from develop to first
+0031072 HEAD@{88}: commit: add file_in_develop in develop
+1f179a4 HEAD@{89}: commit: modified anyfile in develop
+31ae257 HEAD@{90}: checkout: moving from second to develop
+31ae257 HEAD@{91}: checkout: moving from develop to second
+31ae257 HEAD@{92}: checkout: moving from first to develop
+31ae257 HEAD@{93}: checkout: moving from develop to first
+31ae257 HEAD@{94}: commit: add anyfile in develop
+6296a44 HEAD@{95}: checkout: moving from master to develop
+6296a44 HEAD@{96}: commit (initial): add readme in master

@@ -1,0 +1,75 @@
+137ee86 (HEAD -> main, origin/main, origin/HEAD) HEAD@{0}: commit: add gitignore
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{1}: checkout: moving from develop to main
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{2}: checkout: moving from main to develop
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{3}: checkout: moving from images2 to main
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{4}: rebase (continue) (finish): returning to refs/heads/images2   
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{5}: rebase (start): checkout develop
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{6}: checkout: moving from main to develop
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{7}: reset: moving to 95e8ef62
+fd2da82 HEAD@{8}: checkout: moving from develop to main
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{9}: checkout: moving from main to develop
+fd2da82 HEAD@{10}: merge develop: Merge made by the 'ort' strategy.
+4663da5 HEAD@{11}: checkout: moving from images2 to main
+f1df396 HEAD@{12}: checkout: moving from styles2 to images2
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{13}: checkout: moving from develop to styles2
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{14}: checkout: moving from main to develop
+4663da5 HEAD@{15}: checkout: moving from styles2 to main
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{16}: rebase (finish): returning to refs/heads/styles2
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{17}: rebase (start): checkout develop
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{18}: rebase (continue) (finish): returning to refs/heads/develop  
+95e8ef6 (origin/styles2, origin/images2, origin/develop, styles2, images2, develop) HEAD@{19}: rebase (pick): add folder in images2
+cf410f6 HEAD@{20}: rebase (start): checkout styles2
+4663da5 HEAD@{21}: checkout: moving from images2 to main
+f1df396 HEAD@{22}: rebase: checkout images2
+f1df396 HEAD@{23}: rebase (finish): returning to refs/heads/develop
+f1df396 HEAD@{24}: rebase (start): checkout images2
+f1df396 HEAD@{25}: rebase: checkout images2
+f1df396 HEAD@{26}: rebase: checkout images2
+f1df396 HEAD@{27}: checkout: moving from develop to images2
+4663da5 HEAD@{28}: checkout: moving from images2 to develop
+f1df396 HEAD@{29}: checkout: moving from develop to images2
+4663da5 HEAD@{30}: checkout: moving from images2 to develop
+f1df396 HEAD@{31}: rebase: checkout images2
+4663da5 HEAD@{32}: checkout: moving from styles2 to develop
+cf410f6 HEAD@{33}: commit: modified Index in styles2
+422a5e1 HEAD@{34}: commit: add folder styles2 in styles2
+4663da5 HEAD@{35}: checkout: moving from develop to styles2
+4663da5 HEAD@{36}: checkout: moving from images2 to develop
+f1df396 HEAD@{37}: commit: modifaed Index in images2
+0796291 HEAD@{38}: commit: add folder in images2
+4663da5 HEAD@{39}: checkout: moving from main to images2
+4663da5 HEAD@{40}: merge develop: Fast-forward
+a9645c1 HEAD@{41}: checkout: moving from develop to main
+4663da5 HEAD@{42}: commit (merge): Merge branch 'styles' into develop
+f9d14ac (origin/images, images) HEAD@{43}: merge images: Fast-forward
+0384a60 HEAD@{44}: checkout: moving from styles to develop
+ff8022e (origin/styles, styles) HEAD@{45}: commit: modified Index in styles
+99f2d6c HEAD@{46}: commit: add folder styles in styles
+0384a60 HEAD@{47}: checkout: moving from develop to styles
+0384a60 HEAD@{48}: checkout: moving from images to develop
+f9d14ac (origin/images, images) HEAD@{49}: commit (amend): modified Index in images
+60052b4 HEAD@{50}: commit: modified Index in images
+5b0b111 HEAD@{51}: commit: add image folder to image
+0384a60 HEAD@{52}: checkout: moving from develop to images
+0384a60 HEAD@{53}: checkout: moving from Images to develop
+0384a60 HEAD@{54}: checkout: moving from develop to Images
+0384a60 HEAD@{55}: commit: add index to develop
+a9645c1 HEAD@{56}: checkout: moving from main to develop
+a9645c1 HEAD@{57}: checkout: moving from develop to main
+1b640df HEAD@{58}: checkout: moving from main to develop
+a9645c1 HEAD@{59}: checkout: moving from develop to main
+1b640df HEAD@{60}: checkout: moving from main to develop
+a9645c1 HEAD@{61}: commit: add readme to main
+1b640df HEAD@{62}: checkout: moving from develop to main
+1b640df HEAD@{63}: reset: moving to 1b640df0
+336a665 HEAD@{64}: checkout: moving from main to develop
+1b640df HEAD@{65}: reset: moving to 1b640df0
+1b640df HEAD@{66}: reset: moving to 1b640df0dd96137d5167491e550c7344c33f6e18
+826cdf2 HEAD@{67}: revert: Revert "Initial commit"
+1b640df HEAD@{68}: checkout: moving from develop to main
+336a665 HEAD@{69}: commit: Revert "add readme"
+b8aecae HEAD@{70}: checkout: moving from main to develop
+1b640df HEAD@{71}: checkout: moving from develop to main
+b8aecae HEAD@{72}: commit: add readme
+1b640df HEAD@{73}: checkout: moving from main to develop
+1b640df HEAD@{74}: clone: from git.epam.com:vladyslav_koshelenko/task1-git-practice-i.git
