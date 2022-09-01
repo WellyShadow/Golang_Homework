@@ -8,34 +8,31 @@ import (
 func main() {
 	var number int
 	var n int
-	fmt.Printf("Input n")
+	fmt.Println("Input n")
 	fmt.Scanf("%d", &n)
-
 	var array []int
 	fmt.Println("Input array")
-	fmt.Println(array)
 	for i := 0; i < n; i++ {
-
 		fmt.Fscan(os.Stdin, &number)
 		array = append(array, number)
 	}
-	fmt.Println(array)
 	fizzbuzz(array)
-
 }
 
 func fizzbuzz(number []int) {
-	for i := 0; i < len(number); i++ {
-		if number[i] == 0 {
-			fmt.Println(number[i])
-		} else if number[i]%3 == 0 && number[i]%5 == 0 {
-			fmt.Println(number[i], "FizzBuzz")
-		} else if number[i]%3 == 0 {
-			fmt.Println(number[i], "Fizz")
-		} else if number[i]%5 == 0 {
-			fmt.Println(number[i], "Buzz")
-		} else {
-			fmt.Println(number[i])
+	fmt.Println("Result:")
+	for _, numb := range number {
+		switch {
+		case numb == 0:
+			fmt.Println(numb)
+		case numb%3 == 0 && numb%5 == 0:
+			fmt.Println("FizzBuzz")
+		case numb%3 == 0:
+			fmt.Println("Fizz")
+		case numb%5 == 0:
+			fmt.Println("Buzz")
+		default:
+			fmt.Println(numb)
 		}
 	}
 }
