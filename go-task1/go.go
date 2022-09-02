@@ -7,12 +7,12 @@ import (
 
 func main() {
 	var number int
-	var n int
+	var amount_of_number int
 	fmt.Println("Input n")
-	fmt.Scanf("%d", &n)
+	fmt.Scanf("%d", &amount_of_number)
 	var array []int
 	fmt.Println("Input array")
-	for i := 0; i < n; i++ {
+	for i := 0; i < amount_of_number; i++ {
 		fmt.Fscan(os.Stdin, &number)
 		array = append(array, number)
 	}
