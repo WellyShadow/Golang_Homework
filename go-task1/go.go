@@ -3,36 +3,49 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
 )
 
-func main() {
-	var number int
-	var amount_of_number int
-	fmt.Println("Input n")
-	fmt.Scanf("%d", &amount_of_number)
-	var array []int
-	fmt.Println("Input array")
-	for i := 0; i < amount_of_number; i++ {
-		fmt.Fscan(os.Stdin, &number)
-		array = append(array, number)
+func Error(err error) {
+	if err != nil {
+		fmt.Println("Your input incorrect. You must input unsigned integer numbers!")
+		os.Exit(0)
 	}
-	fizzbuzz(array)
 }
 
-func fizzbuzz(number []int) {
+func main() {
+	var number uint64
+	var amount_of_number uint64
+	fmt.Println("Input amount of numbers")
+	_, err := fmt.Scanf("%d", &amount_of_number)
+	Error(err)
+	var array []uint64
+	fmt.Println("Input array")
+	for i := uint64(0); i < amount_of_number; i++ {
+		_, err := fmt.Fscan(os.Stdin, &number)
+		Error(err)
+		array = append(array, number)
+	}
+	fmt.Println(fizzbuzz(array))
+
+}
+
+func fizzbuzz(number []uint64) []string {
+	var str []string
 	fmt.Println("Result:")
 	for _, numb := range number {
 		switch {
 		case numb == 0:
-			fmt.Println(numb)
+			str = append(str, strconv.FormatUint(numb, 10))
 		case numb%3 == 0 && numb%5 == 0:
-			fmt.Println("FizzBuzz")
+			str = append(str, "FizzBuzz")
 		case numb%3 == 0:
-			fmt.Println("Fizz")
+			str = append(str, "Fizz")
 		case numb%5 == 0:
-			fmt.Println("Buzz")
+			str = append(str, "Buzz")
 		default:
-			fmt.Println(numb)
+			str = append(str, strconv.FormatUint(numb, 10))
 		}
 	}
+	return str
 }
