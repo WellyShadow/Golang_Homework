@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/WellyShadow/Golang_Homework/tree/develop/go-task2/pkg/greet"
+	"github.com/WellyShadow/Golang_Homework/go-task2/pkg/greet"
 )
 
 func main() {
