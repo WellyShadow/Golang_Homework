@@ -9,6 +9,7 @@ package checkerstring
 
 // importing fmt package for basic
 // printing & scan operations
+var test = "text"
 
 type checkstruct struct {
 	strtocheck string
