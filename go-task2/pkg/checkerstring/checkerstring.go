@@ -10,13 +10,10 @@ package checkerstring
 // importing fmt package for basic
 // printing & scan operations
 
-type checkerstring struct {
-	strtocheck string
-}
+//type checkerstring struct {
+//	strtocheck string
+//}
 
-func (str checkerstring) notempty() string {
-	if len(str.strtocheck) == 0 {
-		str.strtocheck = ""
-	}
-	return str.strtocheck
+func Notempty(str string) string {
+	return str
 }
