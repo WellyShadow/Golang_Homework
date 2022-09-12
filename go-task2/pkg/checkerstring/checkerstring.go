@@ -7,17 +7,32 @@ package checkerstring
 // split the string
 // string to date
 
-// importing fmt package for basic
-// printing & scan operations
-var Test = "text"
-
+//Struct
 type Checkstruct struct {
 	Strtocheck string
 }
 
+// Method Notempty checking
+//if string empty
+// return "Empty String" in variable
+// if string not empty
+// return just string
 func (str *Checkstruct) Notempty() string {
 	if str.Strtocheck == "" {
 		str.Strtocheck = "Empty String"
 	}
 	return str.Strtocheck
+}
+
+func Trim(str Checkstruct, goal int) string {
+	return_str := ""
+	temp := ""
+	for index, srune := range str.Strtocheck {
+		temp = string(srune)
+		return_str += temp
+		if index+1 == goal {
+			break
+		}
+	}
+	return return_str
 }
