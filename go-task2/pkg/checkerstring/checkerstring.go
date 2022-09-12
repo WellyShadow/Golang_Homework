@@ -15,7 +15,7 @@ type Checkstruct struct {
 	Strtocheck string
 }
 
-func (str Checkstruct) Notempty() string {
+func (str *Checkstruct) Notempty() string {
 	if str.Strtocheck == "" {
 		str.Strtocheck = "Empty String"
 	}
