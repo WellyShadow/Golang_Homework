@@ -7,13 +7,13 @@ package checkerstring
 // split the string
 // string to date
 
-//Struct
+//The structure contains the string to be processed
 type Checkstruct struct {
 	Strtocheck string
 }
 
 // Method Notempty checking
-//if string empty
+// if string empty
 // return "Empty String" in variable
 // if string not empty
 // return just string
@@ -24,6 +24,11 @@ func (str *Checkstruct) Notempty() string {
 	return str.Strtocheck
 }
 
+//Function Trim
+// trims the string,
+// leaving the number of elements specified by the user
+// take string and integer number
+// return trimed string
 func Trim(str Checkstruct, goal int) string {
 	return_str := ""
 	temp := ""
