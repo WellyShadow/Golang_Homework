@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	
+
 	"github.com/WellyShadow/Golang_Homework/go-task2/pkg/checkerstring"
 )
 
-var s string
-
 func main() {
+	s := "Vlad"
 	fmt.Println("Hi")
-	s = checkerstring.notempty()
-
+	checkerstring.Notempty(s)
+	fmt.Println(s)
 }
