@@ -9,15 +9,15 @@ package checkerstring
 
 // importing fmt package for basic
 // printing & scan operations
-var test = "text"
+var Test = "text"
 
-type checkstruct struct {
-	strtocheck string
+type Checkstruct struct {
+	Strtocheck string
 }
 
-func (str checkstruct) Notempty() string {
-	if str.strtocheck == "" {
-		str.strtocheck = "Empty String"
+func (str Checkstruct) Notempty() string {
+	if str.Strtocheck == "" {
+		str.Strtocheck = "Empty String"
 	}
-	return str.strtocheck
+	return str.Strtocheck
 }
