@@ -17,7 +17,7 @@ type Checkstruct struct {
 // return just string
 func (str *Checkstruct) Default(def string) string {
 	if str.Strtocheck == "" {
-		str.Strtocheck = def
+		return def
 	}
 	return str.Strtocheck
 }
