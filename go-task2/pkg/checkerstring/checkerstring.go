@@ -1,20 +1,18 @@
-package checkerstring
-
 // I'm creating a simple package cheakerstring
 // It involves:
 // check if string not empty
 // trim string
-// split the string
-// string to date
+// concat the string
+package checkerstring
 
 // The structure contains the string to be processed
 type Checkstruct struct {
 	Strtocheck string
 }
 
-// Method Notempty checking
+// Method Default checking
 // if string empty
-// return "Empty String" in variable
+// return input variable def
 // if string not empty
 // return just string
 func (str *Checkstruct) Default(def string) string {
@@ -24,7 +22,7 @@ func (str *Checkstruct) Default(def string) string {
 	return str.Strtocheck
 }
 
-// Function Trim
+// Method Trim
 // trims the string,
 // leaving the number of elements specified by the user
 // take string and integer number
@@ -42,6 +40,11 @@ func (str *Checkstruct) Trim(goal int) string {
 	return rStr
 }
 
+// Function Concat
+// concatenates strings
+// the first parameter is the connector string
+// all other parameters, strings to be combined
+// return combined string
 func Concat(format string, args ...string) string {
 	cstr := ""
 	for i, arg := range args {
