@@ -7,11 +7,17 @@ import (
 )
 
 func main() {
-	s := checkerstring.Checkstruct{""}
-	s.Notempty()
+	s := checkerstring.Checkstruct{"123"}
+	s.Default("Empty")
 	fmt.Println(s)
 
-	strtortim := checkerstring.Checkstruct{"123456789"}
-	straftertrim := checkerstring.Trim(strtortim, 6)
-	fmt.Println(straftertrim)
+	strtotrim := checkerstring.Checkstruct{"123456789"}
+	result := strtotrim.Trim(3)
+	fmt.Println(result)
+
+	cstr1 := "12"
+	cstr2 := "34"
+	cstr3 := "56"
+	cstr := checkerstring.Concat(",", cstr1, cstr2, cstr3)
+	fmt.Println(cstr)
 }
