@@ -17,9 +17,9 @@ type Checkstruct struct {
 // return "Empty String" in variable
 // if string not empty
 // return just string
-func (str *Checkstruct) Notempty() string {
+func (str *Checkstruct) Default(def string) string {
 	if str.Strtocheck == "" {
-		str.Strtocheck = "Empty String"
+		str.Strtocheck = def
 	}
 	return str.Strtocheck
 }
@@ -40,4 +40,16 @@ func (str *Checkstruct) Trim(goal int) string {
 		}
 	}
 	return rStr
+}
+
+func Concat(format string, args ...string) string {
+	cstr := ""
+	for i, arg := range args {
+		if i == 0 {
+			cstr += arg
+		} else if i > 0 {
+			cstr += format + arg
+		}
+	}
+	return cstr
 }
