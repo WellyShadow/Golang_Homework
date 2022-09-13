@@ -7,7 +7,7 @@ package checkerstring
 // split the string
 // string to date
 
-//The structure contains the string to be processed
+// The structure contains the string to be processed
 type Checkstruct struct {
 	Strtocheck string
 }
@@ -24,20 +24,20 @@ func (str *Checkstruct) Notempty() string {
 	return str.Strtocheck
 }
 
-//Function Trim
+// Function Trim
 // trims the string,
 // leaving the number of elements specified by the user
 // take string and integer number
 // return trimed string
-func Trim(str Checkstruct, goal int) string {
-	return_str := ""
+func (str *Checkstruct) Trim(goal int) string {
+	rStr := ""
 	temp := ""
-	for index, srune := range str.Strtocheck {
+	for i, srune := range str.Strtocheck {
 		temp = string(srune)
-		return_str += temp
-		if index+1 == goal {
+		rStr += temp
+		if i+1 == goal {
 			break
 		}
 	}
-	return return_str
+	return rStr
 }
