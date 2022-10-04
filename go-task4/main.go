@@ -4,18 +4,18 @@ import (
 	"log"
 	"net/http"
 	"time"
-	"github.com/WellyShadow/Golang_Homework/go-task4/controller"
+
 	_ "github.com/lib/pq"
 )
 
-var usersMap map[string]string
+//var usersMap map[string]string
 
 func main() {
 
 	handler := http.NewServeMux()
 	handler.HandleFunc("/user", controller.createuser)
 	//handler.HandleFunc("/user/login", loginuser)
-	usersMap = make(map[string]string)
+	//usersMap = make(map[string]string)
 
 	s := &http.Server{
 		Addr:           ":8080",
