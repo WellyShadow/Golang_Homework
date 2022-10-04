@@ -1,7 +1,9 @@
+package controller
+
 import (
-	"net/http"
 	"encoding/json"
 	"io"
+	"net/http"
 )
 
 type LoginUserRequest struct {
