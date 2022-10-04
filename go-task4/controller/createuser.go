@@ -18,7 +18,7 @@ type CreateUserResponse struct {
 	UserName string `json:"userName,omitempty"`
 }
 
-func createuser(w http.ResponseWriter, req *http.Request) {
+func Createuser(w http.ResponseWriter, req *http.Request) {
 
 	if req.Method != http.MethodPost {
 		http.Error(w, "Bad request", http.StatusBadRequest)

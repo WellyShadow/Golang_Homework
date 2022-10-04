@@ -15,7 +15,7 @@ type LoginUserResponse struct {
 	Url string `json:"url"`
 }
 
-func loginuser(w http.ResponseWriter, req *http.Request) {
+func Loginuser(w http.ResponseWriter, req *http.Request) {
 
 	if req.Method != http.MethodPost {
 		http.Error(w, "Bad request", http.StatusBadRequest)
