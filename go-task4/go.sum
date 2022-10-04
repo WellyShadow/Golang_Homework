@@ -1,5 +1,3 @@
-github.com/WellyShadow/Golang_Homework/go-task4/controller v0.0.0-20221004084106-d03c61b12f47 h1:RUqvMdf0e0hb0oWlYQBEHw7bLxRHLr5ZUDYonYH/id8=
-github.com/WellyShadow/Golang_Homework/go-task4/controller v0.0.0-20221004084106-d03c61b12f47/go.mod h1:H84TZFaRPT6s2/uWP50nFx2IbpxjRDmew8pcGGi5nxw=
 github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/lib/pq v1.10.7 h1:p7ZhMD+KsSRozJr34udlUrhboJwWAgCg34+/ZZNvZZw=
