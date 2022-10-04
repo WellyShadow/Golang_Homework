@@ -1,9 +1,10 @@
 package controller
 
 import (
-	"net/http"
 	"encoding/json"
 	"io"
+	"net/http"
+
 	"github.com/google/uuid"
 )
 
@@ -18,7 +19,6 @@ type CreateUserResponse struct {
 }
 
 func createuser(w http.ResponseWriter, req *http.Request) {
-
 
 	if req.Method != http.MethodPost {
 		http.Error(w, "Bad request", http.StatusBadRequest)
@@ -42,7 +42,6 @@ func createuser(w http.ResponseWriter, req *http.Request) {
 		//usersMap[reqBody.Password] = reqBody.UserName
 		id := uuid.New()
 		resBodyCreate := CreateUserResponse{id.String(), reqBody.UserName}
-		usersMap[resBodyCreate.UserName] := resBodyCreate.Id
 		b, err := json.Marshal(resBodyCreate)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)

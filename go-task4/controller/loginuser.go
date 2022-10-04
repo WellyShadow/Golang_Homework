@@ -28,25 +28,21 @@ func loginuser(w http.ResponseWriter, req *http.Request) {
 	}
 
 	var reqBodyLogin LoginUserRequest
-	var resBodyLogin LoginUserResponse
+	//var resBodyLogin LoginUserResponse
 	err = json.Unmarshal(body, &reqBodyLogin)
 
 	if err != nil {
 		http.Error(w, "Internal Server Error : "+err.Error(), http.StatusInternalServerError)
 	}
 
-	_, ok := usersMap[reqBodyLogin.UserName] //check including
-	if ok {
-		url := "ws://fancy-chat.io/ws&"
-		resBodyLogin.Url = url + usersMap[reqBodyLogin.UserName]
-		b, err := json.Marshal(resBodyLogin)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-		w.Write(b)
-	} else {
-		http.Error(w, "Invalid username/password", http.StatusBadRequest)
+	//_, ok := usersMap[reqBodyLogin.UserName] //check including
+	url := "ws://fancy-chat.io/ws&"
+	//resBodyLogin.Url = url + usersMap[reqBodyLogin.UserName]
+	b, err := json.Marshal(url)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
 	}
+	w.Write(b)
 
 }
