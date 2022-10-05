@@ -9,5 +9,6 @@ import (
 func Createrouter() *http.ServeMux {
 	handler := http.NewServeMux()
 	handler.HandleFunc("/user", controller.Createuser)
+	handler.HandleFunc("/user/login", controller.Loginuser)
 	return handler
 }
