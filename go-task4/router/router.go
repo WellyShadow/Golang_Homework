@@ -8,7 +8,7 @@ import (
 
 func Createrouter() *http.ServeMux {
 	handler := http.NewServeMux()
-	handler.HandleFunc("/user", controller.Createuser)
-	handler.HandleFunc("/user/login", controller.Loginuser)
+	handler.HandleFunc("/user", controller.User)
+	handler.HandleFunc("/user/phone", controller.Phoneuser)
 	return handler
 }
