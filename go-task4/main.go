@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/WellyShadow/Golang_Homework/go-task4/controller"
+	//"github.com/WellyShadow/Golang_Homework/go-task4/controller"
 	_ "github.com/lib/pq"
 )
 
@@ -13,14 +13,14 @@ import (
 
 func main() {
 
-	handler := http.NewServeMux()
-	handler.HandleFunc("/user", controller.Createuser)
+	//handler := http.NewServeMux()
+	//handler.HandleFunc("/user", controller.Createuser)
 	//handler.HandleFunc("/user/login", loginuser)
 	//usersMap = make(map[string]string)
 
 	s := &http.Server{
 		Addr:           ":8080",
-		Handler:        handler,
+		Handler:        Createrouter.handler,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
