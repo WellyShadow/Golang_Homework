@@ -12,11 +12,12 @@ var (
     id  serial PRIMARY KEY,
     name varchar not null,
     surname varchar not null,
-    phones varchar[]
-)`
-	//queryDeleteTable = `DROP TABLE my_table`
+	phones varchar
 
-	queryInsert = `INSERT INTO my_table (name, surname, phones) VALUES ($1, $2, $3)`
+)`
+	queryDeleteTable = `DROP TABLE my_table`
+
+	queryInsert = `INSERT INTO my_table (name, surname) VALUES ($1, $2)`
 
 	querySelect = `SELECT id, name, surname, phones FROM my_table`
 )
@@ -25,32 +26,39 @@ type record struct {
 	id      int
 	name    string
 	surname string
-	phones  []string
+	phones  sql.NullString
+}
+type repository struct {
+	db *sql.DB
 }
 
-func CreateBD() {
+func ConnectBD() *repository {
 	connStr := "user=postgres dbname=postgres sslmode=disable password=root"
+
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	err = db.Ping()
 	if err != nil {
 		log.Fatal(err)
 	}
+	/*_, err = db.Exec(queryCreateTable)
+	if err != nil {
+		log.Fatal(err)
+	}*/
+	return &repository{db: db}
+}
 
-	_, err = db.Exec(queryCreateTable)
+func (rep *repository) InputBD(name, surname string) {
+	_, err := rep.db.Exec(queryInsert, name, surname)
 	if err != nil {
 		log.Fatal(err)
 	}
+}
 
-	_, err = db.Exec(queryInsert, "user", "usersurname", "380887676566")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	rows, err := db.Query(querySelect)
+func (rep *repository) OutputBD() {
+	rows, err := rep.db.Query(querySelect)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -62,12 +70,12 @@ func CreateBD() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		log.Printf("record: %+v", r)
+		log.Printf("record: %v", r)
 	}
-	/*
-		_, err = db.Exec(queryDeleteTable)
-		if err != nil {
-			log.Fatal(err)
-		}
-	*/
+}
+func (rep *repository) DeleteBD() {
+	_, err := rep.db.Exec(queryDeleteTable)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
