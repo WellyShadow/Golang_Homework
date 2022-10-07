@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"github.com/WellyShadow/Golang_Homework/go-task4/router"
-	_ "github.com/lib/pq"
 )
 
 //var usersMap map[string]string
@@ -18,6 +17,7 @@ func main() {
 	//handler.HandleFunc("/user/login", loginuser)
 	//usersMap = make(map[string]string)
 	handler := router.Createrouter()
+	repository.CreateBD
 	s := &http.Server{
 		Addr:           ":8080",
 		Handler:        handler,
