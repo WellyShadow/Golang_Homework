@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/WellyShadow/Golang_Homework/go-task4/repository"
 	"github.com/WellyShadow/Golang_Homework/go-task4/router"
 )
 
@@ -17,7 +18,7 @@ func main() {
 	//handler.HandleFunc("/user/login", loginuser)
 	//usersMap = make(map[string]string)
 	handler := router.Createrouter()
-	repository.CreateBD
+	repository.CreateBD()
 	s := &http.Server{
 		Addr:           ":8080",
 		Handler:        handler,

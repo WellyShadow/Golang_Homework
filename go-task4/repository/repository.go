@@ -3,7 +3,6 @@ package repository
 import (
 	"database/sql"
 	"log"
-	"time"
 
 	_ "github.com/lib/pq"
 )
@@ -12,21 +11,21 @@ var (
 	queryCreateTable = `CREATE TABLE my_table (
     id  serial PRIMARY KEY,
     name varchar not null,
-    created_at TIMESTAMP with time zone,
-    description varchar
+    surname varchar not null,
+    phones varchar[]
 )`
-	queryDeleteTable = `DROP TABLE my_table`
+	//queryDeleteTable = `DROP TABLE my_table`
 
-	queryInsert = `INSERT INTO my_table (name, created_at, description) VALUES ($1, $2, $3)`
+	queryInsert = `INSERT INTO my_table (name, surname, phones) VALUES ($1, $2, $3)`
 
-	querySelect = `SELECT id, name, created_at, description FROM my_table`
+	querySelect = `SELECT id, name, surname, phones FROM my_table`
 )
 
 type record struct {
-	id          int
-	name        string
-	createdAt   time.Time
-	description sql.NullString
+	id      int
+	name    string
+	surname string
+	phones  []string
 }
 
 func CreateBD() {
@@ -46,7 +45,7 @@ func CreateBD() {
 		log.Fatal(err)
 	}
 
-	_, err = db.Exec(queryInsert, "user", time.Now(), nil)
+	_, err = db.Exec(queryInsert, "user", "usersurname", "380887676566")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -59,7 +58,7 @@ func CreateBD() {
 	defer rows.Close()
 	for rows.Next() {
 		r := record{}
-		err := rows.Scan(&r.id, &r.name, &r.createdAt, &r.description)
+		err := rows.Scan(&r.id, &r.name, &r.surname, &r.phones)
 		if err != nil {
 			log.Fatal(err)
 		}
