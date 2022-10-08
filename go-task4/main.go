@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/WellyShadow/Golang_Homework/go-task4/repository"
 	"github.com/WellyShadow/Golang_Homework/go-task4/router"
 )
 
@@ -20,9 +19,6 @@ func main() {
 	handler := router.Createrouter()
 	//var rep repository.Repository
 
-	rep := repository.ConnectBD()
-	rep.InputBD("Danil", "Koshelenko")
-	rep.OutputBD()
 	s := &http.Server{
 		Addr:           ":8080",
 		Handler:        handler,
@@ -31,4 +27,5 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 	log.Fatal(s.ListenAndServe())
+
 }

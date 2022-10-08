@@ -5,12 +5,14 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/WellyShadow/Golang_Homework/go-task4/service"
 	"github.com/google/uuid"
 )
 
 type UserRequest struct {
 	Name    string `json:"name"`
 	SurName string `json:"surName"`
+	Phone   string `json:"phone"`
 }
 
 type UserResponse struct {
@@ -37,6 +39,8 @@ func User(w http.ResponseWriter, req *http.Request) {
 	}
 	id := uuid.New()
 	resBodyCreate := UserResponse{id.String()}
+	service.CreateUser(resBodyCreate.Id, reqBody.Name, reqBody.SurName, reqBody.Phone)
+
 	b, err := json.Marshal(resBodyCreate)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
