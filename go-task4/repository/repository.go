@@ -36,11 +36,11 @@ type record struct {
 	name    string
 	surname string
 }
-type repository struct {
+type Repository struct {
 	db *sql.DB
 }
 
-func ConnectBD() *repository {
+func ConnectBD() *Repository {
 	connStr := "user=postgres dbname=postgres sslmode=disable password=root"
 
 	db, err := sql.Open("postgres", connStr)
@@ -61,11 +61,11 @@ func ConnectBD() *repository {
 		if err != nil {
 			log.Fatal(err)
 		}*/
-	return &repository{db: db}
+	return &Repository{db: db}
 
 }
 
-func (rep *repository) InputBD(id, name, surname, phone string) {
+func (rep *Repository) InputBD(id, name, surname, phone string) {
 	_, err := rep.db.Exec(queryInsertAccount, id, name, surname)
 	if err != nil {
 		log.Fatal(err)
@@ -81,7 +81,7 @@ func (rep *repository) InputBD(id, name, surname, phone string) {
 
 }
 
-func (rep *repository) OutputBD() {
+func (rep *Repository) OutputBD() {
 	rows, err := rep.db.Query(querySelect)
 	if err != nil {
 		log.Fatal(err)
@@ -99,14 +99,14 @@ func (rep *repository) OutputBD() {
 
 }
 
-func (rep *repository) EditBD() {
-	_, err := rep.db.Exec(queryDeleteTable)
+func (rep *Repository) InputPhoneBD(id, phone string) {
+	_, err := rep.db.Exec(queryInsertPhone, id, phone)
 	if err != nil {
 		log.Fatal(err)
 	}
 }
 
-func (rep *repository) DeleteBD() {
+func (rep *Repository) DeleteBD() {
 	_, err := rep.db.Exec(queryDeleteTable)
 	if err != nil {
 		log.Fatal(err)

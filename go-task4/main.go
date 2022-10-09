@@ -16,9 +16,10 @@ func main() {
 	//handler.HandleFunc("/user", controller.Createuser)
 	//handler.HandleFunc("/user/login", loginuser)
 	//usersMap = make(map[string]string)
+
+	//rep := repository.ConnectBD()
 	handler := router.Createrouter()
 	//var rep repository.Repository
-
 	s := &http.Server{
 		Addr:           ":8080",
 		Handler:        handler,

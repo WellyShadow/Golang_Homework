@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
+
+	"github.com/WellyShadow/Golang_Homework/go-task4/service"
 )
 
 type PhoneUserRequest struct {
@@ -23,22 +25,14 @@ func Phoneuser(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "Internal Server Error : "+err.Error(), http.StatusInternalServerError)
 	}
 
-	var reqBodyLogin PhoneUserRequest
-	//var resBodyLogin LoginUserResponse
-	err = json.Unmarshal(body, &reqBodyLogin)
+	var reqBody PhoneUserRequest
+
+	err = json.Unmarshal(body, &reqBody)
+
+	service.AddPhone(reqBody.UserId, reqBody.Phone)
 
 	if err != nil {
 		http.Error(w, "Internal Server Error : "+err.Error(), http.StatusInternalServerError)
 	}
-
-	//_, ok := usersMap[reqBodyLogin.UserName] //check including
-	url := "ws://fancy-chat.io/ws&"
-	//resBodyLogin.Url = url + usersMap[reqBodyLogin.UserName]
-	b, err := json.Marshal(url)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	w.Write(b)
 
 }
