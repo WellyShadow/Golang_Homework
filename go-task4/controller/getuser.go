@@ -2,7 +2,6 @@ package controller
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -18,9 +17,8 @@ func GetUser(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Bad request", http.StatusBadRequest)
 			return
 		}*/
-	params, found := mux.Vars(r)["id"]
-	if !found {
-		log.Println(": [INFO] Id not found ")
-	}
-	fmt.Println(`id := `, params)
+	vars := mux.Vars(r)
+	id := vars["id"]
+	response := fmt.Sprintf("Product %s", id)
+	fmt.Fprint(w, response)
 }
