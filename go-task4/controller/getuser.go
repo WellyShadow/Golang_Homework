@@ -17,6 +17,7 @@ func GetUser(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Bad request", http.StatusBadRequest)
 			return
 		}*/
+
 	vars := mux.Vars(r)
 	id := vars["id"]
 	response := fmt.Sprintf("Product %s", id)

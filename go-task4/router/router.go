@@ -1,15 +1,15 @@
 package router
 
 import (
-	"net/http"
-
 	"github.com/WellyShadow/Golang_Homework/go-task4/controller"
+	"github.com/gorilla/mux"
 )
 
-func Createrouter() *http.ServeMux {
-	handler := http.NewServeMux()
+func Createrouter() *mux.Router {
+	handler := mux.NewRouter()
+	handler.HandleFunc("/users/{id}", controller.GetUser)
 	handler.HandleFunc("/user", controller.User)
 	handler.HandleFunc("/user/phone", controller.Phoneuser)
-	handler.HandleFunc("/users/{id}", controller.GetUser)
+
 	return handler
 }
