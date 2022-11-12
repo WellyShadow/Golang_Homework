@@ -5,7 +5,9 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/WellyShadow/Golang_Homework/go-task4/repository"
 	"github.com/WellyShadow/Golang_Homework/go-task4/router"
+	"github.com/WellyShadow/Golang_Homework/go-task4/service"
 )
 
 //var usersMap map[string]string
@@ -16,7 +18,7 @@ func main() {
 	//handler.HandleFunc("/user", controller.Createuser)
 	//handler.HandleFunc("/user/login", loginuser)
 	//usersMap = make(map[string]string)
-
+	service.PostgresConnection = repository.ConnectDBpostgres()
 	//rep := repository.ConnectBD()
 	handler := router.Createrouter()
 	//var rep repository.Repository

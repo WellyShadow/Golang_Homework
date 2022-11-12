@@ -11,17 +11,19 @@ type User struct {
 	phones  []string `json:"phones"`
 }
 
+var PostgresConnection *repository.Repository
+
 func CreateUser(id, name, surname, phone string) {
-	rep := repository.ConnectDBpostgres()
-	rep.InputDBpostgres(id, name, surname, phone)
+	//rep := repository.ConnectDBpostgres()
+	PostgresConnection.InputDBpostgres(id, name, surname, phone)
 	//coll := repository.ConnectDBmongo()
 	Migration(id)
 	//rep.OutputDBpostgres()
 }
 
 func AddPhone(id, phone string) {
-	rep := repository.ConnectDBpostgres()
-	rep.InputPhoneDBpostgres(id, phone)
+	//rep := repository.ConnectDBpostgres()
+	PostgresConnection.InputPhoneDBpostgres(id, phone)
 	//repository.ConnectDBmongo()
 	//coll := repository.ConnectDBmongo()
 	Migration(id)

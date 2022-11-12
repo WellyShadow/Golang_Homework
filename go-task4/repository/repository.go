@@ -13,18 +13,6 @@ import (
 )
 
 var (
-	queryCreateTablePhones = `CREATE TABLE phones (
-		id serial PRIMARY KEY,
-		userid  varchar,
-		phones varchar,
-		FOREIGN KEY (userid) REFERENCES accounts (userid) 
-)`
-	queryCreateTableAccount = `CREATE TABLE accounts (
-	userid varchar PRIMARY KEY,
-    name varchar not null,
-    surname varchar not null
-)`
-
 	queryDeleteTable = `DROP TABLE accounts`
 
 	queryInsertAccount = `INSERT INTO accounts (userid, name, surname) VALUES ($1, $2, $3)`
@@ -107,7 +95,7 @@ func (coll *Collection) OutputMongoDB(id string) (string, string, string, []stri
 }
 
 func ConnectDBpostgres() *Repository {
-	connStr := "user=postgres dbname=postgres sslmode=disable password=root"
+	connStr := "user=pg dbname=postgres sslmode=disable password=root"
 
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
@@ -117,16 +105,6 @@ func ConnectDBpostgres() *Repository {
 	if err != nil {
 		log.Fatal(err)
 	}
-	/*
-		_, err = db.Exec(queryCreateTableAccount)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		_, err = db.Exec(queryCreateTablePhones)
-		if err != nil {
-			log.Fatal(err)
-		}*/
 	return &Repository{db: db}
 
 }
